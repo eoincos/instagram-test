@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="OpenExplore">
+  <head>
+    <title>Open Explore</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBgZhDqJtUv6T39DLBq3J8lNQfZyfsJ5TU"></script>
+
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <head>
+  <body>
+    <div ng-controller="InstagramCtrl">
+      <div ng-if="!instagramAccessToken">
+        <p>
+          <a class="btn btn btn-default" href="https://api.instagram.com/oauth/authorize/?client_id=5b1f8fe522db46449699e521fe70b885&redirect_uri=http://localhost:8000%3F&response_type=token">Sign In with Instagram</a>
+          <hr />
+          <h2>You need to login to Instagram first</h2>
+        <p>
+      </div>
+      <div ng-if="instagramAccessToken">
+        <p>
+          <button class="btn" ng-click="refresh()"><i class="icon-search"></i>Refresh</button>
+          <hr />
+        <p>
+      </div>
+    </div>
+    <div id="map" style="width:600px;height:400px;"></div>
+    <script type="text/javascript" src="instagram/instagram.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "OpenExplore",
+  "authors": [
+    "Eoin Costelloe <eoincos@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.4.7",
+    "angular-cookies": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "html5-boilerplate": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
