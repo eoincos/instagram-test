@@ -1,4 +1,4 @@
-# open-explore
+# instagram-test
 
 A sample project using Angular
 
